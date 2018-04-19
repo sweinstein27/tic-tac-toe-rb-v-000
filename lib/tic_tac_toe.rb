@@ -62,12 +62,15 @@ def turn_count(board)
 end
 
 def current_player(board)
-  if turn_count(board).even?
-    return "X"
-  else
-    return "O"
-end
-end
+  #if turn_count(board) %  == 0
+    num = turn_count(board)
+    if num % 2 == 0
+      return "X"
+    else
+      return "O" 
+    #puts "divisible by 2"
+    end 
+end 
 
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
